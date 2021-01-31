@@ -6,9 +6,9 @@ def main():
 	# List of categories to sort into
 	categories = [
 		"male",
-		"female",
+		# "female",
 		"cat",
-		"dog",
+		# "dog",
 	]
 
 	model = Model(categories, dataSize=1000, evaluationSize=1000)		

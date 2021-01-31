@@ -1,0 +1,11 @@
+GENERAL NOTES ON HOW THE NEURAL NETWORK ACTAULLY WORKS
+
+- For categorising, the last layer should have same shape as the number of categories
+- The last layer has to be softmax in the model in order to conver to a normalised percentage 
+- I that layer can be either a Dense() layer with softmax activation or a Softmax() layer
+ 
+- The resulting array displays confidence for each category.
+- Argmax(result) to get the model's most likely answer.
+
+
+- no clue what the fuck the middle layers do.

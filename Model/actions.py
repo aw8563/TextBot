@@ -2,7 +2,7 @@ from numpy import argmax
 
 from matplotlib import pyplot
 from tensorflow.keras.models import load_model, Sequential
-from tensorflow.keras.layers import Dense, Flatten, Softmax
+from tensorflow.keras.layers import Dense, Flatten
 from tensorflow.keras.preprocessing.image import load_img
 from termcolor import colored as coloured
 
@@ -13,8 +13,7 @@ def buildModel(nCategories, shape, optimizer):
 	model = Sequential([
 		Flatten(input_shape=shape),
 	    Dense(128, activation='relu'), # random middle layers?
-	   	Dense(nCategories), # number of classification categories
-	    Softmax() # normalise to percentage
+	   	Dense(nCategories, activation='softmax'), # number of classification categories. softmax so it normalises to a percentage.
 	])
 
 	model.compile(optimizer=optimizer,
